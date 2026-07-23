@@ -24,8 +24,8 @@ def _plan(seed: int) -> tuple[Path, object]:
 
 
 def test_same_seed_produces_same_metrics(tmp_path: Path) -> None:
-    study_one = tmp_path / "one"
-    study_two = tmp_path / "two"
+    study_one = tmp_path / "research" / "one"
+    study_two = tmp_path / "research" / "two"
     study_one.mkdir(parents=True, exist_ok=True)
     study_two.mkdir(parents=True, exist_ok=True)
     _, plan = _plan(20260723)
@@ -35,4 +35,3 @@ def test_same_seed_produces_same_metrics(tmp_path: Path) -> None:
     result_two = runner.run(study_two, plan)
 
     assert result_one.metrics == result_two.metrics
-

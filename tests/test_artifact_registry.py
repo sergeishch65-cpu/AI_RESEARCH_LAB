@@ -13,5 +13,6 @@ def test_sha256_and_registry(tmp_path: Path) -> None:
     records = register_artifacts(study_root, "exp-1", [artifact])
     assert len(records) == 1
     assert records[0].sha256 == sha256_file(artifact)
+    assert records[0].path == "research/demo_study/results/sample.txt"
+    assert (tmp_path / records[0].path).exists()
     assert (study_root / "logs" / "artifact_registry.json").exists()
-

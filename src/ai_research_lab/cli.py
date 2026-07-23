@@ -13,7 +13,7 @@ from .claim_extractor import load_claim
 from .config import load_lab_config
 from .models import ExperimentPlan, ExperimentResult
 from .logbook_builder import build_logbook
-from .paths import config_path, project_root, research_root, study_paths, validate_study_name
+from .paths import config_path, portable_relative_path, project_root, research_root, study_paths, validate_study_name
 
 
 def _print(msg: str) -> None:
@@ -133,9 +133,23 @@ def cmd_build_logbook(study_name: str) -> int:
     claim = load_claim(claim_path)
     plan = ExperimentPlan.model_validate_json(plan_path.read_text(encoding="utf-8"))
     result = ExperimentResult.model_validate_json(result_files[-1].read_text(encoding="utf-8"))
-    artifact_paths = [claim_path, plan_path, *[Path(path) for path in result.artifact_paths]]
-    artifacts = register_artifacts(paths.root, result.experiment_id, artifact_paths)
+    runner_artifact_paths = [Path(path) for path in result.artifact_paths if Path(path).name != "LOGBOOK.md"]
+    registry_artifact_paths = [claim_path, plan_path, *runner_artifact_paths]
+    artifacts = register_artifacts(paths.root, result.experiment_id, registry_artifact_paths)
     logbook_path = build_logbook(paths.root, study_name, claim, plan, result, artifacts)
+    register_artifacts(paths.root, result.experiment_id, registry_artifact_paths + [logbook_path])
+    updated_result = result.model_copy(
+        update={
+            "artifact_paths": [
+                portable_relative_path(path, paths.root.parent.parent)
+                for path in [*runner_artifact_paths, logbook_path]
+            ]
+        }
+    )
+    result_files[-1].write_text(
+        json.dumps(updated_result.model_dump(mode="json"), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     _print(f"Logbook построен: {logbook_path}")
     return 0
 

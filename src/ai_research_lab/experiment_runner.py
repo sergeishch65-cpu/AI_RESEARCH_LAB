@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 from .models import ExperimentPlan, ExperimentResult, WorkflowStatus
-from .paths import ensure_within_root
+from .paths import ensure_within_root, portable_relative_path
 
 
 class ExperimentRunner:
@@ -41,12 +41,14 @@ class ExperimentRunner:
         if any(not isinstance(size, int) or size <= 0 for size in sample_sizes):
             raise ValueError("sample_sizes должен содержать положительные целые числа.")
         replicates = int(plan.parameters["replicates"])
-        ensure_within_root(study_root.parent, study_root)
+        project_root_dir = study_root.resolve().parents[1]
+        ensure_within_root(project_root_dir / "research", study_root)
         return sample_sizes, replicates
 
     def run(self, study_root: Path, plan: ExperimentPlan) -> ExperimentResult:
         started_at = datetime.now(timezone.utc)
         sample_sizes, replicates = self._validate_inputs(study_root, plan)
+        project_root_dir = study_root.resolve().parents[1]
 
         experiment_dir = study_root / "experiments" / plan.experiment_id
         results_dir = study_root / "results"
@@ -158,12 +160,12 @@ class ExperimentRunner:
             parameters=plan.parameters,
             metrics=metrics_payload,
             artifact_paths=[
-                str(raw_json_path),
-                str(raw_csv_path),
-                str(metrics_path),
-                str(figure_path),
-                str(result_path),
-                str(log_path),
+                portable_relative_path(raw_json_path, project_root_dir),
+                portable_relative_path(raw_csv_path, project_root_dir),
+                portable_relative_path(metrics_path, project_root_dir),
+                portable_relative_path(figure_path, project_root_dir),
+                portable_relative_path(result_path, project_root_dir),
+                portable_relative_path(log_path, project_root_dir),
             ],
             environment=self._versions,
             error_message=None,
@@ -173,4 +175,3 @@ class ExperimentRunner:
             encoding="utf-8",
         )
         return result
-

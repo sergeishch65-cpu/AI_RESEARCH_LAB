@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .models import ArtifactRecord, ArtifactType
-from .paths import ensure_within_root
+from .paths import ensure_within_root, portable_relative_path, resolve_portable_path
 
 
 def sha256_file(path: Path) -> str:
@@ -47,18 +47,22 @@ def register_artifacts(
 ) -> list[ArtifactRecord]:
     registry_path = study_root / "logs" / "artifact_registry.json"
     registry_path.parent.mkdir(parents=True, exist_ok=True)
+    project_root_dir = study_root.resolve().parents[1]
 
     records: list[ArtifactRecord] = []
     for artifact_path in artifact_paths:
-        resolved = artifact_path if artifact_path.is_absolute() else (study_root / artifact_path)
-        resolved = ensure_within_root(study_root, resolved)
+        if Path(artifact_path).is_absolute():
+            resolved = ensure_within_root(project_root_dir, Path(artifact_path))
+        else:
+            resolved = resolve_portable_path(artifact_path, project_root_dir)
         if not resolved.exists():
             raise FileNotFoundError(f"Артефакт не найден: {resolved}")
+        relative_path = portable_relative_path(resolved, project_root_dir)
         records.append(
             ArtifactRecord(
-                artifact_id=f"{experiment_id}:{resolved.relative_to(study_root).as_posix()}",
+                artifact_id=f"{experiment_id}:{relative_path}",
                 artifact_type=classify_artifact(resolved),
-                path=str(resolved),
+                path=relative_path,
                 sha256=sha256_file(resolved),
                 created_at=datetime.now(timezone.utc).isoformat(),
                 experiment_id=experiment_id,
@@ -71,4 +75,3 @@ def register_artifacts(
         encoding="utf-8",
     )
     return records
-

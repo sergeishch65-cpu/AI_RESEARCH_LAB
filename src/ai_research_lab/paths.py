@@ -43,6 +43,21 @@ def ensure_within_root(root: Path, candidate: Path) -> Path:
     return candidate_resolved
 
 
+def portable_relative_path(path: Path, base_root: Path | None = None) -> str:
+    root = Path(base_root).resolve() if base_root is not None else project_root()
+    resolved = path if path.is_absolute() else root / path
+    resolved = ensure_within_root(root, resolved)
+    return resolved.relative_to(root).as_posix()
+
+
+def resolve_portable_path(path: str | Path, base_root: Path | None = None) -> Path:
+    root = Path(base_root).resolve() if base_root is not None else project_root()
+    candidate = Path(path)
+    if candidate.is_absolute():
+        raise ValueError("Переносимый путь должен быть относительным.")
+    return ensure_within_root(root, root / candidate)
+
+
 @dataclass(frozen=True)
 class StudyPaths:
     root: Path

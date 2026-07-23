@@ -34,6 +34,11 @@ def load_claim(path: Path) -> ResearchClaim:
 def save_claim(path: Path, claim: ResearchClaim) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = claim.model_dump(mode="json")
+    if path.exists():
+        existing = json.loads(path.read_text(encoding="utf-8"))
+        existing.pop("updated_at", None)
+        if existing == payload:
+            return
     payload["updated_at"] = datetime.now(timezone.utc).isoformat()
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

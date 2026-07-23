@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
 from importlib import metadata
 from pathlib import Path
 
-from .models import ArtifactRecord, ExperimentPlan, ExperimentResult, ResearchClaim
+from .models import ArtifactRecord, ArtifactType, ExperimentPlan, ExperimentResult, ResearchClaim
 
 
 def _version(name: str) -> str:
@@ -25,11 +24,23 @@ def build_logbook(
     logbook_dir = study_root / "logbook"
     logbook_dir.mkdir(parents=True, exist_ok=True)
     logbook_path = logbook_dir / "LOGBOOK.md"
-    created_at = datetime.now(timezone.utc).isoformat()
+    created_at = result.completed_at
+    artifact_rows = [
+        artifact
+        for artifact in artifacts
+        if artifact.artifact_type != ArtifactType.LOGBOOK and Path(artifact.path).name != "LOGBOOK.md"
+    ]
+    unique_artifacts: list[ArtifactRecord] = []
+    seen_paths: set[str] = set()
+    for artifact in artifact_rows:
+        if artifact.path in seen_paths:
+            continue
+        seen_paths.add(artifact.path)
+        unique_artifacts.append(artifact)
 
     artifact_lines = "\n".join(
         f"| {artifact.artifact_id} | {artifact.artifact_type.value} | {artifact.path} | {artifact.sha256} |"
-        for artifact in artifacts
+        for artifact in unique_artifacts
     )
 
     summary_rows = result.metrics["summary_by_sample_size"]
@@ -102,4 +113,3 @@ def build_logbook(
 """
     logbook_path.write_text(body, encoding="utf-8")
     return logbook_path
-
