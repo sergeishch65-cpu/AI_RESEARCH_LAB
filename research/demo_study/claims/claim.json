@@ -1,0 +1,11 @@
+{
+  "claim_id": "claim-standard-normal-mean",
+  "text": "При увеличении количества независимых выборок оценка среднего значения стандартного нормального распределения в среднем приближается к истинному среднему, равному нулю.",
+  "source": "demo_study",
+  "expected_direction": "DECREASE",
+  "metric": "absolute_error_of_mean_estimate",
+  "target_value": 0.0,
+  "tolerance": 0.05,
+  "status": "PLANNED",
+  "updated_at": "2026-07-23T14:13:58.007321+00:00"
+}

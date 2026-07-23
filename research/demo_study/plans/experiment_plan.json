@@ -1,0 +1,32 @@
+{
+  "experiment_id": "mean_convergence_demo",
+  "claim_id": "claim-standard-normal-mean",
+  "hypothesis": "Если увеличить размер выборки, средняя абсолютная ошибка оценки среднего значения стандартного нормального распределения уменьшится.",
+  "method": "Генерируем независимые выборки из стандартного нормального распределения, сравниваем среднюю абсолютную ошибку оценки среднего для нескольких размеров выборки.",
+  "parameters": {
+    "experiment_type": "mean_convergence",
+    "sample_sizes": [
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "replicates": 64,
+    "distribution": "standard_normal"
+  },
+  "seed": 20260723,
+  "expected_artifacts": [
+    "raw_results.json",
+    "raw_results.csv",
+    "metrics.json",
+    "convergence.png",
+    "experiment_result.json",
+    "artifact_registry.json",
+    "LOGBOOK.md"
+  ],
+  "success_criteria": {
+    "final_mean_abs_error_max": 0.05,
+    "final_error_better_than_initial": true
+  },
+  "status": "PLANNED"
+}
