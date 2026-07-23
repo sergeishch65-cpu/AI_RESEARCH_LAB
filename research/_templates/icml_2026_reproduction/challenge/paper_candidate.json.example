@@ -1,0 +1,15 @@
+{
+  "paper_id": "icml-2026-paper-id",
+  "title": "Paper title",
+  "authors": [
+    "Author One",
+    "Author Two"
+  ],
+  "paper_url": "https://example.com/paper",
+  "code_url": null,
+  "dataset_urls": [],
+  "claimed_result": "Brief summary of the main empirical claim.",
+  "estimated_compute": "local smoke test only",
+  "selected": false,
+  "selection_status": "NOT_SELECTED"
+}

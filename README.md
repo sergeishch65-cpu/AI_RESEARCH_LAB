@@ -23,6 +23,83 @@
 - использовать векторные базы данных;
 - запускать облачные или GPU-тяжёлые пайплайны.
 
+## ICML 2026 Agent Reproduction Challenge
+
+В проект уже подключён отдельный слой для конкурса Hugging Face ICML 2026 Agent Reproduction Challenge.
+
+Что уже подключено:
+
+- локальная диагностика Hugging Face CLI;
+- отдельный Trackio adapter для local-only run;
+- challenge config и cost policy без секретов;
+- шаблон будущего reproduction study;
+- структура документации по правилам конкурса и безопасности;
+- команды `ai-research-lab challenge ...`.
+
+Что такое Hugging Face:
+
+- это платформа для моделей, датасетов, Spaces, Jobs и CLI-инструментов;
+- в этом проекте Hugging Face используется только как безопасный внешний слой для будущей репродукции, без автоматической публикации.
+
+Что такое Trackio:
+
+- это lightweight experiment tracking library;
+- в local-first режиме она пишет данные локально и не требует remote Space;
+- в этом проекте Trackio дополняет обычный Markdown logbook, а не заменяет его.
+
+Что такое local run:
+
+- это локальный smoke test без cloud GPU и без remote публикации;
+- он нужен, чтобы проверить код, данные и структуру результата до любой внешней активности.
+
+Что пока не опубликовано:
+
+- ни один reproduction logbook;
+- ни один submission;
+- ни один Hugging Face Space, Dataset или repository для конкурса.
+
+Как проверить авторизацию:
+
+```bash
+.venv/bin/hf auth whoami
+```
+
+Если входа нет, используется обычный browser login flow:
+
+```bash
+.venv/bin/hf auth login
+```
+
+Почему token нельзя вставлять в чат или код:
+
+- token даёт доступ к Hugging Face аккаунту;
+- он не должен попадать в Git, notebook, logbook или shell history;
+- в этом проекте допускается только безопасная локальная диагностика без раскрытия token.
+
+Как запустить challenge doctor:
+
+```bash
+make challenge-doctor
+```
+
+Как выполнить Trackio smoke test:
+
+```bash
+make challenge-trackio-smoke
+```
+
+Что будет следующим этапом:
+
+- совместно с наставником выбрать paper_id;
+- создать отдельный challenge study из шаблона;
+- после этого готовить полноценную репродукцию статьи.
+
+Важно:
+
+- выбор статьи делает пользователь совместно с наставником;
+- код не выбирает paper_id автоматически;
+- publish и submit сейчас заблокированы.
+
 ## Структура каталогов
 
 ```text
@@ -147,4 +224,3 @@ make notebook-check
 - `Jupyter not found` - проверьте, что установка в `.venv` завершилась без ошибок.
 - `No such file or directory` для study - сначала выполните `python -m ai_research_lab.cli init-study demo_study`.
 - `NOT_REPRODUCED` - проверьте критерии успеха и посмотрите `metrics.json`.
-

@@ -9,6 +9,19 @@ from pathlib import Path
 
 from .agent import ResearchAgent
 from .artifact_registry import register_artifacts
+from .challenge.workflows import (
+    blocked_publication_payload,
+    blocked_submission_payload,
+    challenge_auth_payload,
+    challenge_doctor_payload,
+    challenge_sources_sync_payload,
+    challenge_trackio_smoke_payload,
+    create_challenge_study,
+    prepare_publication_manifest,
+    publication_status_payload,
+    submission_status_payload,
+    verify_challenge_study,
+)
 from .claim_extractor import load_claim
 from .config import load_lab_config
 from .models import ExperimentPlan, ExperimentResult
@@ -154,6 +167,76 @@ def cmd_build_logbook(study_name: str) -> int:
     return 0
 
 
+def cmd_challenge_doctor() -> int:
+    payload = challenge_doctor_payload(project_root())
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0 if payload["challenge_config_ok"] and payload["source_docs_ok"] and payload["secret_scan_ok"] and payload["existing_baseline_ok"] else 1
+
+
+def cmd_challenge_auth_status() -> int:
+    payload = challenge_auth_payload(project_root())
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_sources_sync() -> int:
+    payload = challenge_sources_sync_payload(project_root())
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_trackio_smoke() -> int:
+    payload = challenge_trackio_smoke_payload(project_root())
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_init_study(paper_id: str, study_id: str | None = None) -> int:
+    study = create_challenge_study(project_root(), paper_id=paper_id, study_id=study_id)
+    _print(json.dumps(study.model_dump(mode="json"), ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_verify_study(study_id: str) -> int:
+    payload = verify_challenge_study(project_root(), study_id)
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0 if payload["status"] == "VERIFIED" else 1
+
+
+def cmd_challenge_publication_status(study_id: str) -> int:
+    payload = publication_status_payload(project_root(), study_id)
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_prepare_publication(study_id: str) -> int:
+    payload = prepare_publication_manifest(project_root(), study_id)
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_publish(study_id: str, confirm: bool) -> int:
+    payload = blocked_publication_payload(project_root(), study_id)
+    payload["confirm"] = confirm
+    payload["message"] = "Публикация заблокирована в этой задаче. Нужны selection, approval и разрешение на publish."
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 1
+
+
+def cmd_challenge_submission_status(study_id: str) -> int:
+    payload = submission_status_payload(project_root(), study_id)
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_challenge_submit(study_id: str, confirm: bool) -> int:
+    payload = blocked_submission_payload(project_root(), study_id)
+    payload["confirm"] = confirm
+    payload["message"] = "Submission заблокирована в этой задаче. Нужны publication=PUBLISHED и разрешение на submit."
+    _print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="ai_research_lab")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -172,6 +255,38 @@ def main(argv: list[str] | None = None) -> int:
     build_parser = subparsers.add_parser("build-logbook")
     build_parser.add_argument("study_name")
 
+    challenge_parser = subparsers.add_parser("challenge")
+    challenge_subparsers = challenge_parser.add_subparsers(dest="challenge_command", required=True)
+
+    challenge_subparsers.add_parser("doctor")
+    challenge_subparsers.add_parser("auth-status")
+    challenge_subparsers.add_parser("sources-sync")
+    challenge_subparsers.add_parser("trackio-smoke")
+
+    init_challenge_parser = challenge_subparsers.add_parser("init-study")
+    init_challenge_parser.add_argument("--paper-id", required=True)
+    init_challenge_parser.add_argument("--study-id")
+
+    verify_challenge_parser = challenge_subparsers.add_parser("verify-study")
+    verify_challenge_parser.add_argument("study_id")
+
+    publication_status_parser = challenge_subparsers.add_parser("publication-status")
+    publication_status_parser.add_argument("study_id")
+
+    prepare_publication_parser = challenge_subparsers.add_parser("prepare-publication")
+    prepare_publication_parser.add_argument("study_id")
+
+    publish_parser = challenge_subparsers.add_parser("publish")
+    publish_parser.add_argument("study_id")
+    publish_parser.add_argument("--confirm", action="store_true")
+
+    submission_status_parser = challenge_subparsers.add_parser("submission-status")
+    submission_status_parser.add_argument("study_id")
+
+    submit_parser = challenge_subparsers.add_parser("submit")
+    submit_parser.add_argument("study_id")
+    submit_parser.add_argument("--confirm", action="store_true")
+
     args = parser.parse_args(argv)
 
     if args.command == "doctor":
@@ -184,6 +299,29 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_verify(args.study_name)
     if args.command == "build-logbook":
         return cmd_build_logbook(args.study_name)
+    if args.command == "challenge":
+        if args.challenge_command == "doctor":
+            return cmd_challenge_doctor()
+        if args.challenge_command == "auth-status":
+            return cmd_challenge_auth_status()
+        if args.challenge_command == "sources-sync":
+            return cmd_challenge_sources_sync()
+        if args.challenge_command == "trackio-smoke":
+            return cmd_challenge_trackio_smoke()
+        if args.challenge_command == "init-study":
+            return cmd_challenge_init_study(args.paper_id, args.study_id)
+        if args.challenge_command == "verify-study":
+            return cmd_challenge_verify_study(args.study_id)
+        if args.challenge_command == "publication-status":
+            return cmd_challenge_publication_status(args.study_id)
+        if args.challenge_command == "prepare-publication":
+            return cmd_challenge_prepare_publication(args.study_id)
+        if args.challenge_command == "publish":
+            return cmd_challenge_publish(args.study_id, args.confirm)
+        if args.challenge_command == "submission-status":
+            return cmd_challenge_submission_status(args.study_id)
+        if args.challenge_command == "submit":
+            return cmd_challenge_submit(args.study_id, args.confirm)
     return 1
 
 

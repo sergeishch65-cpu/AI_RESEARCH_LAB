@@ -1,0 +1,22 @@
+challenge_id: ICML-2026-agent-repro
+challenge_space: https://huggingface.co/spaces/ICML-2026-agent-repro/challenge
+guide_url: https://huggingface.co/datasets/ICML-2026-agent-repro/challenge/resolve/main/README.md
+organization: ICML-2026-agent-repro
+starts_at: 2026-07-01T00:00:00Z
+ends_at: 2026-12-31T23:59:59Z
+publication_required: true
+trackio_required: true
+source_urls:
+  - https://huggingface.co/ICML-2026-agent-repro/challenge
+  - https://huggingface.co/datasets/ICML-2026-agent-repro/challenge/resolve/main/README.md
+  - https://huggingface.co/docs/huggingface_hub/guides/cli
+  - https://huggingface.co/docs/huggingface_hub/package_reference/authentication
+  - https://huggingface.co/docs/trackio/index
+  - https://huggingface.co/docs/trackio/artifacts
+  - https://huggingface.co/docs/hub/agents-skills
+trackio_local_dir: .trackio
+default_study_dir: research/_templates/icml_2026_reproduction
+publication_enabled: false
+submission_enabled: false
+network_actions_requiring_approval: true
+cost_limit_usd: 0.0

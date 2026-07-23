@@ -1,0 +1,17 @@
+{
+  "manifest_id": "manifest-placeholder",
+  "challenge_id": "ICML-2026-agent-repro",
+  "study_id": "icml_2026_reproduction_placeholder",
+  "paper_id": "icml-2026-paper-id",
+  "prepared_at": "2026-07-23T00:00:00Z",
+  "trackio_project": "icml_2026_reproduction_placeholder",
+  "trackio_run_id": null,
+  "local_logbook_path": "research/_templates/icml_2026_reproduction/logbook/LOGBOOK.md",
+  "local_run_summary_path": null,
+  "artifact_paths": [],
+  "source_provenance_paths": [],
+  "registry_integrity": false,
+  "approval_recorded": false,
+  "publication_flag": false,
+  "notes": []
+}

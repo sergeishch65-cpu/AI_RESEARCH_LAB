@@ -1,0 +1,7 @@
+max_local_cost_usd: 0.0
+max_remote_cost_usd: 0.0
+cloud_gpu_allowed: false
+hf_jobs_allowed: false
+paid_api_allowed: false
+publication_allowed: false
+submission_allowed: false
