@@ -1,0 +1,15 @@
+project_name: AI_RESEARCH_LAB
+default_study: demo_study
+safe_experiment_type: mean_convergence
+sample_sizes:
+  - 10
+  - 100
+  - 1000
+  - 10000
+replicates: 64
+seed: 20260723
+figure_name: convergence.png
+success_criteria:
+  final_mean_abs_error_max: 0.05
+  final_error_better_than_initial: true
+

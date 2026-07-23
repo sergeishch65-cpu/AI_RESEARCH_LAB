@@ -1,0 +1,14 @@
+jupyterlab
+notebook
+nbconvert
+nbformat
+numpy
+pandas
+matplotlib
+pyyaml
+pydantic
+pytest
+pytest-cov
+ruff
+ipykernel
+

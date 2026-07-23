@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+*.log
+build/
+dist/
+*.egg-info/
+
+# Generated research outputs can be recreated locally.
+research/*/experiments/*
+!research/*/experiments/.gitkeep
+research/*/results/*
+!research/*/results/.gitkeep
+research/*/figures/*
+!research/*/figures/.gitkeep
+research/*/logs/*
+!research/*/logs/.gitkeep
+research/*/logbook/*
+!research/*/logbook/.gitkeep
