@@ -1,0 +1,223 @@
+{
+  "generated_at_utc": "2026-07-26T00:00:00Z",
+  "title": "Colorful Pinball Independent Audit v1.0",
+  "repository": "https://github.com/sergeishch65-cpu/AI_RESEARCH_LAB",
+  "article": "Colorful Pinball: Density-Weighted Quantile Regression for Conditional Guarantee of Conformal Prediction",
+  "verdict": "PARTIALLY_CONFIRMED",
+  "technical_reproducibility": "CONFIRMED",
+  "numerical_reproducibility": "PARTIALLY_CONFIRMED",
+  "statistical_reproducibility": "INSUFFICIENT_EVIDENCE",
+  "seed_control": "BLOCKED",
+  "files": [
+    {
+      "path": "FINAL_AUDIT_REPORT.md",
+      "sha256": "31c33e4a53962c1f08e8208c95052aeb3ea69884bcf9577196dac6451ccf9552",
+      "size_bytes": 78912
+    },
+    {
+      "path": "LOGBOOK.md",
+      "sha256": "376057c2be9feced57cb2a02f21e58a373d4bb03cf9da99c63957f9d1be2fe8e",
+      "size_bytes": 3271
+    },
+    {
+      "path": "manifests/build_summary.json",
+      "sha256": "7467190d5aca5cd2142c3eda3059024b1e232aacf34ff7605a6547f9d1267e6a",
+      "size_bytes": 1629
+    },
+    {
+      "path": "manifests/exports_manifest.json",
+      "sha256": "cfd03049c5f99e9bd1c890fb0615e414537bfcbc17d921241a71d3ea73e99648",
+      "size_bytes": 12385
+    },
+    {
+      "path": "manifests/independent_readiness_report.md",
+      "sha256": "2c839d3f7a3c506ed918e9e5a79757cfb0dcc354c020407c68ba030a931d97bd",
+      "size_bytes": 7203
+    },
+    {
+      "path": "manifests/notebooklm_exports_manifest.json",
+      "sha256": "90bb560c30f56e3a098abbf082d73fd1b911ade2aaa0f4ae08cb9fc75a8baee9",
+      "size_bytes": 6216
+    },
+    {
+      "path": "manifests/PUBLICATION_MANIFEST.json",
+      "sha256": "ab5a120c418757b6152792c82f79a302aa57a2faf42d36bd538202569e782e69",
+      "size_bytes": 5082
+    },
+    {
+      "path": "manifests/RELEASE_MANIFEST.json",
+      "sha256": "0ecaa86ee1137b2d0f33026bd11712ca2a42ac8316c4241824391f1802768804",
+      "size_bytes": 7752
+    },
+    {
+      "path": "manifests/source_manifest.json",
+      "sha256": "3ccd2d2295897d3832c8ddbfa4a3474116e46a3e0328edc45431eaa3acf498e9",
+      "size_bytes": 1111
+    },
+    {
+      "path": "manifests/STUDY_STATUS.json",
+      "sha256": "c902338f89d0bac457d6c0771c5e3b9acfd3555130fe1fd9e529f989d7f61b46",
+      "size_bytes": 8392
+    },
+    {
+      "path": "metadata/independent_readiness_report.md",
+      "sha256": "2c839d3f7a3c506ed918e9e5a79757cfb0dcc354c020407c68ba030a931d97bd",
+      "size_bytes": 7203
+    },
+    {
+      "path": "metadata/previews/en_contact_sheet.png",
+      "sha256": "f0087290a54d3feae03e04f2a7013191740f8838a0cccafa6c3abd510e3fbfa3",
+      "size_bytes": 457781
+    },
+    {
+      "path": "metadata/previews/ru_contact_sheet.png",
+      "sha256": "056f72c3811ee678f6773e4417c215d358df2d83e0d3eb8a07c002da5dccf214",
+      "size_bytes": 476685
+    },
+    {
+      "path": "presentation/figures/slide-01.jpg",
+      "sha256": "4c69c6718c283f73442d55bd3244e29725eed9b1e9954359dc44068c8e41cae5",
+      "size_bytes": 351284
+    },
+    {
+      "path": "presentation/figures/slide-02.jpg",
+      "sha256": "a9f831c5b794b9f860ac8bf6bdd521a6747c1a8a6897e97790670a70ffbb5002",
+      "size_bytes": 292159
+    },
+    {
+      "path": "presentation/figures/slide-03.jpg",
+      "sha256": "8564e490f725237cf2b2b41f34684135673cb47134d20d68b64311d2ad39c5bd",
+      "size_bytes": 240719
+    },
+    {
+      "path": "presentation/figures/slide-04.jpg",
+      "sha256": "2b8f487dc5164eb99d8b2ec0e22d860f98b2f9c948a27ed71dd1d3745d41e00a",
+      "size_bytes": 442938
+    },
+    {
+      "path": "presentation/figures/slide-05.jpg",
+      "sha256": "fd7c35ebbf9193583e9e4c5b67f5cb1e2c0febfe0828f185e25a0c652b530327",
+      "size_bytes": 387385
+    },
+    {
+      "path": "presentation/figures/slide-06.jpg",
+      "sha256": "828da9a6c7fbf2b9e02b00a140d69ca8b4a8557640ac0cbde4f160d3c0281c16",
+      "size_bytes": 423266
+    },
+    {
+      "path": "presentation/figures/slide-07.jpg",
+      "sha256": "a3c8a2dabab2ac1f20d628bacfe9c44838fed6e927677552a1f69248b75bf6bf",
+      "size_bytes": 439286
+    },
+    {
+      "path": "presentation/figures/slide-08.jpg",
+      "sha256": "27c3171aea188eb52288b55862e91fd23c1b04508fc254b8f01832b392112f91",
+      "size_bytes": 470174
+    },
+    {
+      "path": "presentation/figures/slide-09.jpg",
+      "sha256": "e24308b75e09e1280ec1d51d615f3669a043004784e33f8db036be9c7d637580",
+      "size_bytes": 405651
+    },
+    {
+      "path": "presentation/figures/slide-10.jpg",
+      "sha256": "6a4fb6a4955b4b5ec00b35a38344ddfc68795d11a27038864b36a87b7d2ed0dd",
+      "size_bytes": 410889
+    },
+    {
+      "path": "presentation/figures/slide-11.jpg",
+      "sha256": "c881550b033d1ddb43e10e8c7ac04631a92be947a23274e1f6a35f0d50710882",
+      "size_bytes": 474344
+    },
+    {
+      "path": "presentation/figures/slide-12.jpg",
+      "sha256": "546ae599c2492102bf1eed91964da14891bd0a18b349dcb83ab3013dade4bc4e",
+      "size_bytes": 420950
+    },
+    {
+      "path": "presentation/figures/slide-13.jpg",
+      "sha256": "beabc073f918de287b566ad5620c494bf1244aa58ac0957d4aef1aa7f3da9ce3",
+      "size_bytes": 434017
+    },
+    {
+      "path": "presentation/figures/slide-14.jpg",
+      "sha256": "704ff59a5417a7f6f61653ed653d4efb7b215e09d6c8d58e939538736d901557",
+      "size_bytes": 468193
+    },
+    {
+      "path": "presentation/figures/slide-15.jpg",
+      "sha256": "c5368c1ffb6b44651dfcde3798d16fa45955e0461104ae9f9c9d6becb1376fdd",
+      "size_bytes": 484944
+    },
+    {
+      "path": "presentation/figures/slide-16.jpg",
+      "sha256": "adf9b77e785c45fe032535520a91510796fe09491020f619433d3134885f1dc9",
+      "size_bytes": 457754
+    },
+    {
+      "path": "presentation/figures/slide-17.jpg",
+      "sha256": "81cb47c33c512600759b5ee24cc765b05fb8b4cf673c5ad069861c814e316b35",
+      "size_bytes": 524228
+    },
+    {
+      "path": "presentation/figures/slide-18.jpg",
+      "sha256": "9909fa6b3719d0c67a3d0570e1989cc347ca7ee28865e6de7f5a56f6151da2a2",
+      "size_bytes": 393582
+    },
+    {
+      "path": "presentation/PRESENTATION.pdf",
+      "sha256": "84a25403c9a570dc408cab1d49663ef3dd242ae421d925e4533b4121c24370db",
+      "size_bytes": 9702888
+    },
+    {
+      "path": "presentation/PRESENTATION.pptx",
+      "sha256": "b1ca4c3f37e9dab84499e0158fca6b1b4c9c49926ddbde2a129542c88bc0866a",
+      "size_bytes": 10783803
+    },
+    {
+      "path": "presentation/sources/en/01_context.md",
+      "sha256": "ad09b3d40afd5f379d45130be1febb21b856b0c3c2011476556ba2f74861caae",
+      "size_bytes": 626
+    },
+    {
+      "path": "presentation/sources/en/02_evidence.md",
+      "sha256": "961bd35756a4589e986960487477137f2641b815b974e588a033052bb748dc81",
+      "size_bytes": 601
+    },
+    {
+      "path": "presentation/sources/en/03_recommendations.md",
+      "sha256": "58b4c76ccc7be633e664ee46efc9a480bd81a5bf48e668e8b5e50085e44ed156",
+      "size_bytes": 518
+    },
+    {
+      "path": "presentation/sources/ru/01_context.md",
+      "sha256": "e91b5978cdb4cdc3b182ffa68243ecab8821fb145959576eb4a9524b4e014170",
+      "size_bytes": 657
+    },
+    {
+      "path": "presentation/sources/ru/02_evidence.md",
+      "sha256": "961bd35756a4589e986960487477137f2641b815b974e588a033052bb748dc81",
+      "size_bytes": 601
+    },
+    {
+      "path": "presentation/sources/ru/03_recommendations.md",
+      "sha256": "58b4c76ccc7be633e664ee46efc9a480bd81a5bf48e668e8b5e50085e44ed156",
+      "size_bytes": 518
+    },
+    {
+      "path": "presentation/SPEAKER_NOTES_RU.txt",
+      "sha256": "15829a550cc42fc27b4adcde4bdf59a92f083635a61a0a4875ce762b73cb8767",
+      "size_bytes": 4144
+    },
+    {
+      "path": "README.md",
+      "sha256": "9f71f6be1397e95585588eeb5c354ed7d0b39043231cd8776e55ee4a431cbee2",
+      "size_bytes": 2625
+    },
+    {
+      "path": "REPRODUCTION_REPORT.md",
+      "sha256": "2123dd32e3fb7b9d5598aeffefda44875185202aa4eed82954b38663987262ab",
+      "size_bytes": 1418
+    }
+  ]
+}

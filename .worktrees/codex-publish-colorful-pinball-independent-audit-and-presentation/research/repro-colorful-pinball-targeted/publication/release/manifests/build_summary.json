@@ -1,0 +1,16 @@
+{
+  "ru": {
+    "pptx": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/ru/COLORFUL_PINBALL_DIAMOND_PRESENTATION_RU.pptx",
+    "pdf": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/ru/COLORFUL_PINBALL_DIAMOND_PRESENTATION_RU.pdf",
+    "notes": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/ru/SPEAKER_NOTES_RU.txt",
+    "figures": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/figures/ru"
+  },
+  "en": {
+    "pptx": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/en/COLORFUL_PINBALL_DIAMOND_PRESENTATION_EN.pptx",
+    "pdf": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/en/COLORFUL_PINBALL_DIAMOND_PRESENTATION_EN.pdf",
+    "notes": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/exports/en/SPEAKER_NOTES_EN.txt",
+    "figures": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/figures/en"
+  },
+  "metadata": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/metadata/exports_manifest.json",
+  "sourceManifest": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/presentation/metadata/source_manifest.json"
+}

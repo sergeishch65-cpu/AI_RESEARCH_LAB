@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-07-25T00:00:00Z",
+  "final_verdict": "PARTIALLY_CONFIRMED",
+  "validation_status": "PASSED",
+  "source_dependencies": [
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/STUDY_STATUS.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/logbook/LOGBOOK.md",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/article_diamond_results.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/article_diamond_claims.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_comparison.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_pair_verdicts.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_winner_comparison.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_ranking_comparison.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_discrepancy_hypotheses.csv",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/diamond_reproducibility_summary.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/statistical/diamond_sample_completion_summary.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/analysis/diamond/statistical/diamond_statistical_reproduction_summary.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/RUN_001_IMMUTABILITY_CHECK.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/PRE_COMPLETION_INTEGRITY_CHECK.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/SAMPLE_COMPLETION_REVIEW.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/ENVIRONMENT_SNAPSHOT.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/BASELINE_INTEGRITY_MANIFEST.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/execution/diamond_statistical/CPU_ONLY_EXECUTION_ASSESSMENT.md",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/provenance/article_sources/ARTICLE_IDENTITY.json",
+    "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/provenance/article_sources/SOURCE_MATERIALS_MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_FINAL_REPRODUCTION_REPORT.md",
+      "size_bytes": 78587,
+      "sha256": "31c33e4a53962c1f08e8208c95052aeb3ea69884bcf9577196dac6451ccf9552",
+      "language": "ru",
+      "purpose": "Main Russian publication report"
+    },
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_PUBLIC_SUMMARY_RU.md",
+      "size_bytes": 5035,
+      "sha256": "6cc00e4c9c8a237e8c2da8769182d21a645b258fe0d777b078a3893c1545a932",
+      "language": "ru",
+      "purpose": "Short public Russian summary"
+    },
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_EXECUTIVE_SUMMARY_EN.md",
+      "size_bytes": 3454,
+      "sha256": "6d30103878a394ef421bca5e2cefc1999facc7a8992df93608846783471b31be",
+      "language": "en",
+      "purpose": "English executive summary"
+    },
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_FINAL_VERDICT.json",
+      "size_bytes": 14209,
+      "sha256": "0371503c0c63512b764de08d36f5d93c7988309db8f01eaf95bd28c4e1fcfc84",
+      "language": "json",
+      "purpose": "Machine-readable final verdict"
+    },
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_CITATION_MAP.csv",
+      "size_bytes": 6498,
+      "sha256": "7363bf4ee73f6c57faad1368113d72135bc0d925ddf67c65ae992e5cacf45d14",
+      "language": "csv",
+      "purpose": "Claim-to-evidence citation map"
+    },
+    {
+      "path": "/Users/sergej/Documents/AI_RESEARCH_LAB/research/repro-colorful-pinball-targeted/publication/FINAL_REPORT_EVIDENCE_VALIDATION.json",
+      "size_bytes": 565,
+      "sha256": "1e74bb90d2972c1614f44795aa6a1d37ecf261f0a0bbda25cd5ade08c8adb584",
+      "language": "json",
+      "purpose": "Pre-publication evidence validation"
+    }
+  ]
+}
