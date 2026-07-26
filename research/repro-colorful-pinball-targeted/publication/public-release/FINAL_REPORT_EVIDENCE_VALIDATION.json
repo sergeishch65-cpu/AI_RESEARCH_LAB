@@ -1,0 +1,16 @@
+{
+  "validated_at_utc": "2026-07-25T00:00:00Z",
+  "study_root": "research/repro-colorful-pinball-targeted",
+  "primary_pdf_sha256_verified": true,
+  "statistical_plan_sha256_verified": true,
+  "run_bundle_immutable": true,
+  "locked_inputs_unchanged": true,
+  "json_files_valid": true,
+  "csv_files_valid": true,
+  "status_consistency_verified": true,
+  "scope_confirmed": "Diamond only",
+  "unsupported_claims_found": [],
+  "missing_required_artifacts": [],
+  "blocking_issues": [],
+  "ready_for_publication_report": true
+}

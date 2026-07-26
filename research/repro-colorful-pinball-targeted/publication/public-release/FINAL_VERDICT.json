@@ -1,0 +1,269 @@
+{
+  "laboratory": "AI Research Lab",
+  "study": "Colorful Pinball",
+  "scope": "Diamond benchmark only",
+  "report_version": "v1.0",
+  "report_date_utc": "2026-07-25T00:00:00Z",
+  "article": {
+    "title": "Colorful Pinball: Density-Weighted Quantile Regression for Conditional Guarantee of Conformal Prediction",
+    "authors": [
+      "Qianyi Chen",
+      "Bo Li"
+    ],
+    "year": 2026,
+    "primary_source_sha256": "20ca7db872d6d2905f5d06bad11294aa2ccdc4878506c4eadd4f803f84094187"
+  },
+  "technical_reproducibility": {
+    "status": "CONFIRMED",
+    "evidence": [
+      "research/repro-colorful-pinball-targeted/execution/diamond_statistical/runs/run-001-seed-42/VALIDATION.json",
+      "research/repro-colorful-pinball-targeted/execution/diamond_statistical/runs/run-001-seed-42/RESULT_MANIFEST.json",
+      "research/repro-colorful-pinball-targeted/execution/diamond_statistical/runs/run-001-seed-42/diamond_results.csv",
+      "research/repro-colorful-pinball-targeted/execution/diamond_statistical/RUN_001_IMMUTABILITY_CHECK.json",
+      "research/repro-colorful-pinball-targeted/execution/diamond_statistical/PRE_COMPLETION_INTEGRITY_CHECK.json"
+    ]
+  },
+  "numerical_reproducibility": {
+    "status": "PARTIALLY_CONFIRMED",
+    "exact_matches": 11,
+    "rounded_matches": 11,
+    "discrepancies": 10,
+    "not_comparable": 37,
+    "raw_exact_matches": 0,
+    "reported_precision_matches": 11,
+    "numerically_close_without_threshold": 57,
+    "article_only_rows": 24,
+    "reproduction_only_rows": 13
+  },
+  "winner_reproducibility": {
+    "status": "PARTIALLY_CONFIRMED",
+    "matches": 6,
+    "mismatches": 0,
+    "not_comparable": 1
+  },
+  "ranking_reproducibility": {
+    "status": "PARTIALLY_CONFIRMED",
+    "stable_metrics": [],
+    "partially_stable_metrics": [
+      "Size",
+      "WSC",
+      "MSCE_10",
+      "MSCE_30",
+      "L1-ERT",
+      "L2-ERT"
+    ],
+    "different_metrics": [],
+    "top1_stable_metrics": [
+      "Size",
+      "WSC",
+      "MSCE_10",
+      "MSCE_30",
+      "L1-ERT",
+      "L2-ERT"
+    ],
+    "full_order_match_metrics": []
+  },
+  "statistical_reproducibility": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "sample_completion": "COMPLETE",
+    "seed_control": "BLOCKED",
+    "reason": "The official entrypoint does not expose a supported external seed override, so independently controlled seed-specific reruns could not be launched."
+  },
+  "claim_audit": {
+    "confirmed": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "partially_confirmed": [
+      "C5"
+    ],
+    "not_confirmed": [],
+    "insufficient_evidence": [],
+    "out_of_scope": []
+  },
+  "overall_verdict": "PARTIALLY_CONFIRMED",
+  "confidence": "Moderate",
+  "limitations": [
+    "Diamond-only scope: выводы не распространяются на Bike или остальные datasets.",
+    "No environment-matched hardware run: matched comparison with authors was not performed.",
+    "CPU-only execution: baseline accepted with limitations.",
+    "Version and dependency uncertainty: no exact matched rerun across all dependency states.",
+    "Limited statistical protocol detail in the article: external seed override absent.",
+    "Impossible to independently replay individual seeds through supported interface.",
+    "Only one official aggregated control protocol bundle is available in the workspace.",
+    "Potential ambiguity in Volume/Size naming: resolved as renamed same metric for Diamond only.",
+    "Published precision limits some cells to reported rounding rather than exact lexical equality.",
+    "No new reruns were performed during publication packaging.",
+    "No causal claim can be asserted for observed discrepancies without matched experiments."
+  ],
+  "recommendations_to_authors": [
+    {
+      "priority": "Critical",
+      "recommendation": "Добавить официальный внешний параметр `--seed`",
+      "problem": "Проблема: external reproducibility blocked. Предлагаемое изменение: CLI seed override.",
+      "scientific_benefit": "Польза: enables independent reruns and seed audit."
+    },
+    {
+      "priority": "Critical",
+      "recommendation": "Добавить официальный список seeds",
+      "problem": "Проблема: seed schedule hidden inside entrypoint. Предлагаемое изменение: explicit published seed list.",
+      "scientific_benefit": "Польза: makes repeatability auditable."
+    },
+    {
+      "priority": "Critical",
+      "recommendation": "Разрешить запуск одного seed отдельно",
+      "problem": "Проблема: cannot isolate one run. Предлагаемое изменение: single-seed mode.",
+      "scientific_benefit": "Польза: improves debugging and variance estimation."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Публиковать raw result для каждого seed",
+      "problem": "Проблема: only aggregate output is published. Предлагаемое изменение: per-seed raw results.",
+      "scientific_benefit": "Польза: enables inter-run statistics."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Публиковать mean, std и confidence intervals",
+      "problem": "Проблема: incomplete statistical disclosure. Предлагаемое изменение: report mean/std/CI.",
+      "scientific_benefit": "Польза: enables stronger replication claims."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Указать точное число repeats",
+      "problem": "Проблема: repeated-seed semantics are implicit. Предлагаемое изменение: explicit repeat count.",
+      "scientific_benefit": "Польза: prevents ambiguity in audit."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Описать метод aggregation",
+      "problem": "Проблема: aggregation path not explicit enough for external audit. Предлагаемое изменение: specify aggregation protocol.",
+      "scientific_benefit": "Польза: makes result reproduction transparent."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Зафиксировать hardware",
+      "problem": "Проблема: hardware sensitivity unresolved. Предлагаемое изменение: publish CPU/GPU and model details.",
+      "scientific_benefit": "Польза: aids matched-environment comparison."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Зафиксировать OS",
+      "problem": "Проблема: OS-dependent behavior may vary. Предлагаемое изменение: publish OS version and build.",
+      "scientific_benefit": "Польза: improves environment matching."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Зафиксировать Python version",
+      "problem": "Проблема: runtime drift. Предлагаемое изменение: exact Python version.",
+      "scientific_benefit": "Польза: reduces dependency ambiguity."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Зафиксировать dependency versions",
+      "problem": "Проблема: package drift. Предлагаемое изменение: lock dependency versions.",
+      "scientific_benefit": "Польза: reproducible environment."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Публиковать lock-file",
+      "problem": "Проблема: hidden dependency state. Предлагаемое изменение: include lock-file.",
+      "scientific_benefit": "Польза: supports exact recreation."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Указать thread count",
+      "problem": "Проблема: multithreading can affect numerical order. Предлагаемое изменение: record thread settings.",
+      "scientific_benefit": "Польза: more deterministic execution."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Указать BLAS/LAPACK backend",
+      "problem": "Проблема: linear algebra backend may differ. Предлагаемое изменение: backend disclosure.",
+      "scientific_benefit": "Польза: better numeric comparability."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Уточнить CPU/GPU equivalence",
+      "problem": "Проблема: equivalence is assumed, not proven. Предлагаемое изменение: explicit equivalence note or benchmark.",
+      "scientific_benefit": "Польза: clarifies interpretation of hardware results."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Документировать hidden defaults",
+      "problem": "Проблема: defaults can alter outcomes. Предлагаемое изменение: publish all defaults.",
+      "scientific_benefit": "Польза: avoids hidden-state surprises."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Добавить deterministic execution mode",
+      "problem": "Проблема: stochastic drift. Предлагаемое изменение: deterministic mode flag.",
+      "scientific_benefit": "Польза: supports regression testing."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Уточнить mapping Volume/Size",
+      "problem": "Проблема: naming ambiguity. Предлагаемое изменение: explicit metric mapping note.",
+      "scientific_benefit": "Польза: avoids miscomparison."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Публиковать machine-readable tables",
+      "problem": "Проблема: manual extraction is error-prone. Предлагаемое изменение: CSV/JSON tables.",
+      "scientific_benefit": "Польза: easier auditing."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Добавить reproducibility script",
+      "problem": "Проблема: procedural reconstruction is verbose. Предлагаемое изменение: one-command bundle generator.",
+      "scientific_benefit": "Польза: lowers replication barrier."
+    },
+    {
+      "priority": "Medium",
+      "recommendation": "Публиковать checksum datasets and results",
+      "problem": "Проблема: provenance validation requires hashes. Предлагаемое изменение: explicit checksums.",
+      "scientific_benefit": "Польза: integrity verification."
+    },
+    {
+      "priority": "Low",
+      "recommendation": "Добавить CI smoke test benchmark",
+      "problem": "Проблема: regressions may go unnoticed. Предлагаемое изменение: CI smoke test.",
+      "scientific_benefit": "Польза: early warning for breakages."
+    },
+    {
+      "priority": "Low",
+      "recommendation": "Документировать expected runtime and memory",
+      "problem": "Проблема: planning is difficult without resource info. Предлагаемое изменение: runtime/memory estimates.",
+      "scientific_benefit": "Польза: operational readiness."
+    },
+    {
+      "priority": "Low",
+      "recommendation": "Указать rules for rounding",
+      "problem": "Проблема: precision interpretation can differ. Предлагаемое изменение: rounding rules.",
+      "scientific_benefit": "Польза: fewer false disagreements."
+    },
+    {
+      "priority": "High",
+      "recommendation": "Публиковать полный statistical protocol",
+      "problem": "Проблема: statistical reproducibility remains insufficiently evidenced. Предлагаемое изменение: complete protocol.",
+      "scientific_benefit": "Польза: stronger and more auditable claims."
+    }
+  ],
+  "source_artifacts": [
+    "research/repro-colorful-pinball-targeted/source_materials/original_article/colorful_pinball_article.pdf",
+    "research/repro-colorful-pinball-targeted/source_materials/original_article/colorful_pinball_article.html",
+    "research/repro-colorful-pinball-targeted/provenance/article_sources/ARTICLE_IDENTITY.json",
+    "research/repro-colorful-pinball-targeted/provenance/article_sources/SOURCE_MATERIALS_MANIFEST.json",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/article_diamond_results.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/diamond_comparison.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/diamond_pair_verdicts.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/diamond_winner_comparison.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/diamond_ranking_comparison.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/diamond_discrepancy_hypotheses.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/article_diamond_claims.csv",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/statistical/diamond_sample_completion_summary.json",
+    "research/repro-colorful-pinball-targeted/analysis/diamond/statistical/diamond_statistical_reproduction_summary.json",
+    "research/repro-colorful-pinball-targeted/execution/diamond_statistical/SAMPLE_COMPLETION_REVIEW.json"
+  ]
+}

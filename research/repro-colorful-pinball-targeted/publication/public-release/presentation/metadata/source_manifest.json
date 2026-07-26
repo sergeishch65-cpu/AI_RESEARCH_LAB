@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-07-26T00:00:00Z",
+  "sources": {
+    "ru": [
+      "presentation/sources/ru/01_context.md",
+      "presentation/sources/ru/02_evidence.md",
+      "presentation/sources/ru/03_recommendations.md"
+    ],
+    "en": [
+      "presentation/sources/en/01_context.md",
+      "presentation/sources/en/02_evidence.md",
+      "presentation/sources/en/03_recommendations.md"
+    ]
+  },
+  "source_notes": "presentation/metadata/source-notes-public.txt"
+}

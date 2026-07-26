@@ -1,0 +1,52 @@
+--- Slide 1 ---
+
+--- Slide 2 ---
+This slide explains the authors’ promises in plain language. Diamond is the focus because it is the part we could independently audit.
+
+--- Slide 3 ---
+This slide shows the review frame: execution, numeric comparison, ranking, and seed control. The lab was checking the evidence base, not improving the method.
+
+--- Slide 4 ---
+This slide lists the approved sources only: the final report, manifest, study status, logbook, verified tables, and verified results.
+
+--- Slide 5 ---
+We show not only the commit hash but the full code context: entrypoint, metrics, immutable run bundle, and the fact that vendor/data/config/wrapper stayed unchanged.
+
+--- Slide 6 ---
+This is the method map. It stays short on purpose: the deck is meant to explain the review clearly, not to reproduce every internal audit detail.
+
+--- Slide 7 ---
+Technical reproducibility here means the official execution path works, the result is created, and the immutable bundle preserves the provenance chain.
+
+--- Slide 8 ---
+Numerical agreement is not binary. What matters here is not only exact matches, but also reported precision, closeness, and material discrepancies.
+
+--- Slide 9 ---
+The winners match across the shared metrics, but the full rank order does not. That is the difference between top-1 agreement and full ranking stability.
+
+--- Slide 10 ---
+This slide removes a false alarm: Volume and Size are the same measurement for the audit, not two different scientific metrics.
+
+--- Slide 11 ---
+The claim audit keeps “what the numbers show” separate from “what we can claim about the paper.”
+
+--- Slide 12 ---
+This block explains why statistical reproducibility remains insufficiently evidenced: without external seed control, we cannot estimate spread or stability.
+
+--- Slide 13 ---
+This slide lists only what remains unproven. That helps avoid confusing partial confirmation with full confirmation.
+
+--- Slide 14 ---
+The limitations do not weaken the conclusion; they define its boundaries. That matters especially for a mixed audience.
+
+--- Slide 15 ---
+The recommendations are about transparency, not changing the scientific result. They would make future versions easier to audit.
+
+--- Slide 16 ---
+This slide collects the traceability trail: where the evidence lives and how to find it without guessing.
+
+--- Slide 17 ---
+This is the final slide, but not a publication. It repeats the approved final verdict and does not re-score anything.
+
+--- Slide 18 ---
+The closing slide fixes the metadata and status. No publication was performed; the deck is prepared only for an independent readiness review.

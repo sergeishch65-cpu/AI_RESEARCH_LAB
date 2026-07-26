@@ -1,0 +1,10 @@
+Source scope: approved AI Research Lab artifacts only.
+Primary report: research/repro-colorful-pinball-targeted/publication/COLORFUL_PINBALL_DIAMOND_FINAL_REPRODUCTION_REPORT.md
+Study status: research/repro-colorful-pinball-targeted/STUDY_STATUS.json
+Logbook: research/repro-colorful-pinball-targeted/logbook/LOGBOOK.md
+Manifest: research/repro-colorful-pinball-targeted/publication/PUBLICATION_MANIFEST.json
+No external sources were used to form scientific conclusions.
+Original authors’ repository: https://github.com/Cqyiiii/Colorful-Pinball-Conformal-Prediction-CPCP
+AI Research Lab evidence repository: https://github.com/sergeishch65-cpu/AI_RESEARCH_LAB
+Publication date used in deck metadata: 2026-07-26
+Presentation version: v1.0

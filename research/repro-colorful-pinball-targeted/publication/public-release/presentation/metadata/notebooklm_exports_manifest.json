@@ -1,0 +1,113 @@
+{
+  "generated_at_utc": "2026-07-26T00:00:00Z",
+  "source": "NotebookLM export",
+  "language": "ru",
+  "files": [
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/Colorful_Pinball_Independent_Audit.pdf",
+      "sha256": "84a25403c9a570dc408cab1d49663ef3dd242ae421d925e4533b4121c24370db",
+      "size_bytes": 9702888
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/Colorful_Pinball_Independent_Audit.pptx",
+      "sha256": "b1ca4c3f37e9dab84499e0158fca6b1b4c9c49926ddbde2a129542c88bc0866a",
+      "size_bytes": 10783803
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/SPEAKER_NOTES_RU.txt",
+      "sha256": "15829a550cc42fc27b4adcde4bdf59a92f083635a61a0a4875ce762b73cb8767",
+      "size_bytes": 4144
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-01.png",
+      "sha256": "4302a69aa7b6621f7bea08e006434a567ed7a12617c13dda9be5919ef7988b68",
+      "size_bytes": 950743
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-02.png",
+      "sha256": "414c4eec6bb4ca29f9a5003d18ed0952d98fff13ba416f0aa7cbfd2af881ebec",
+      "size_bytes": 873055
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-03.png",
+      "sha256": "0c5f5f653d9826645f3844b353e89b35b8ac008d9daf8081e641391a061ba96f",
+      "size_bytes": 767819
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-04.png",
+      "sha256": "1e9305bec30c2c8b8815eb771f4e0a3750112f7846dc210b52540b48f03d1cde",
+      "size_bytes": 1155098
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-05.png",
+      "sha256": "00a3b09e05033d5d4bcf4433503f77064135b53f70d790606ffae93ce7647c48",
+      "size_bytes": 1184722
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-06.png",
+      "sha256": "27b4e3f1a832695cf473203c4cdd683a3213bd4d7e7598333a91bdb49c313030",
+      "size_bytes": 925294
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-07.png",
+      "sha256": "2a1af0e6bbebab9f9ba8ed9e8152f0fdc861bf8ec08dd90c8a7326bab725cc4e",
+      "size_bytes": 1048542
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-08.png",
+      "sha256": "c345bc761d91f5989e9856e85081f5b787afadc0aa17daf3df3c3b68a5c632d6",
+      "size_bytes": 1260119
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-09.png",
+      "sha256": "c013d919443be9b920d0a59211027a11258955ef2776c69fe572dba1e98ee772",
+      "size_bytes": 1165396
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-10.png",
+      "sha256": "aa27a9150a1e656376ae4ce7c507304069d8f74ea0b151ef4efcb1ab46125307",
+      "size_bytes": 1084406
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-11.png",
+      "sha256": "1340f396b02aeeb04197f69f0f0faaab1459286bc984a1d371c909fe9b6da95b",
+      "size_bytes": 1185236
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-12.png",
+      "sha256": "0362b1bd27f6479107381294a612fdff174e308ed13a5a1f95cdfcbeb8009878",
+      "size_bytes": 1837497
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-13.png",
+      "sha256": "b2ffe00bb540d08aaaa60cb687393f24d2998d6d513d988f4acbe49d42648f30",
+      "size_bytes": 1109777
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-14.png",
+      "sha256": "cf6fab32160ae42b68097b6a89582f1f4fd49703aec18a60a2cfdab1d29d59c7",
+      "size_bytes": 1221493
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-15.png",
+      "sha256": "be95209e47bf9ea747a615dd620b8a669c4d733a93987ec46d169aafd32315c8",
+      "size_bytes": 1324964
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-16.png",
+      "sha256": "56c808dbd95602ff689ab8d968f21c977218f94d8c8a7bea8125a55bf61ae2ba",
+      "size_bytes": 992462
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-17.png",
+      "sha256": "e0a5f7aa648ed533aac12efedcd288087d59c1dbdbd24ac94a01ba1df8a881e3",
+      "size_bytes": 1161262
+    },
+    {
+      "path": "publication/research/repro-colorful-pinball-targeted/publication/presentation/exports/notebooklm/figures/slide-18.png",
+      "sha256": "dfae6e188bb7308be1402832329b0ec593581de354a6ed4b77fa280f882953e9",
+      "size_bytes": 1390970
+    }
+  ],
+  "page_count": 18
+}

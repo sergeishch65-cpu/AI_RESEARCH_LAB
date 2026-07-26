@@ -1,0 +1,16 @@
+{
+  "ru": {
+    "pptx": "presentation/exports/ru/COLORFUL_PINBALL_DIAMOND_PRESENTATION_RU.pptx",
+    "pdf": "presentation/exports/ru/COLORFUL_PINBALL_DIAMOND_PRESENTATION_RU.pdf",
+    "notes": "presentation/exports/ru/SPEAKER_NOTES_RU.txt",
+    "figures": "presentation/figures/ru"
+  },
+  "en": {
+    "pptx": "presentation/exports/en/COLORFUL_PINBALL_DIAMOND_PRESENTATION_EN.pptx",
+    "pdf": "presentation/exports/en/COLORFUL_PINBALL_DIAMOND_PRESENTATION_EN.pdf",
+    "notes": "presentation/exports/en/SPEAKER_NOTES_EN.txt",
+    "figures": "presentation/figures/en"
+  },
+  "metadata": "presentation/metadata/exports_manifest.json",
+  "sourceManifest": "presentation/metadata/source_manifest.json"
+}
