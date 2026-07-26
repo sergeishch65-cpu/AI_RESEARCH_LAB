@@ -225,6 +225,14 @@ Third-party articles, datasets, source repositories, vendor code, figures, and o
 
 See the LICENSE file for details.
 
+## Publication
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21608710.svg)](https://doi.org/10.5281/zenodo.21608710)
+
+DOI: 10.5281/zenodo.21608710
+
+Zenodo URL: https://zenodo.org/records/21608710
+
 ## Типичные ошибки и как их исправить
 
 - `python: command not found` - активируйте `.venv` или используйте `make install`.
