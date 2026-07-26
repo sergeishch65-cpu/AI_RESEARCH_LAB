@@ -14,7 +14,7 @@
 ## 2. Project identity
 
 - Проект: `AI_RESEARCH_LAB`
-- Корень: `/Users/sergej/Documents/AI_RESEARCH_LAB`
+- Корень: `<REPOSITORY_ROOT>`
 - Назначение: локальная исследовательская лаборатория с CLI, агентом, runner-логикой, registry артефактов, logbook и notebook smoke-test.
 
 ## 3. Environment

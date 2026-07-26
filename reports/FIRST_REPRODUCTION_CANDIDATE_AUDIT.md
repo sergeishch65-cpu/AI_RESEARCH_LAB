@@ -386,12 +386,12 @@ Why those risks are acceptable:
 
 ### Local project sources
 
-- [README.md](/Users/sergej/Documents/AI_RESEARCH_LAB/README.md)
-- [ICML 2026 Challenge Guide](/Users/sergej/Documents/AI_RESEARCH_LAB/docs/challenge/ICML_2026_CHALLENGE_GUIDE.md)
-- [Security Guide](/Users/sergej/Documents/AI_RESEARCH_LAB/docs/challenge/SECURITY.md)
-- [Source Provenance](/Users/sergej/Documents/AI_RESEARCH_LAB/docs/challenge/SOURCE_PROVENANCE.md)
-- [Final Setup Report](/Users/sergej/Documents/AI_RESEARCH_LAB/reports/FINAL_SETUP_REPORT.md)
-- [ICML 2026 Integration Report](/Users/sergej/Documents/AI_RESEARCH_LAB/reports/ICML_2026_INTEGRATION_REPORT.md)
+- [README.md](../README.md)
+- [ICML 2026 Challenge Guide](../docs/challenge/ICML_2026_CHALLENGE_GUIDE.md)
+- [Security Guide](../docs/challenge/SECURITY.md)
+- [Source Provenance](../docs/challenge/SOURCE_PROVENANCE.md)
+- [Final Setup Report](FINAL_SETUP_REPORT.md)
+- [ICML 2026 Integration Report](ICML_2026_INTEGRATION_REPORT.md)
 
 ### External primary sources
 
@@ -415,4 +415,3 @@ Why those risks are acceptable:
 Create a new challenge study skeleton for the selected WISDM-only scope, then implement the claim extraction / experiment plan / verification path for that one dataset.
 
 Do not do that work in this audit.
-

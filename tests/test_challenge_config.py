@@ -4,7 +4,7 @@ from ai_research_lab.challenge.config import load_challenge_config, load_cost_po
 
 
 def test_challenge_config_parsing_and_policy() -> None:
-    root = Path("/Users/sergej/Documents/AI_RESEARCH_LAB")
+    root = Path(__file__).resolve().parents[1]
     config = load_challenge_config(root / "config" / "challenge_icml_2026.yaml")
     policy = load_cost_policy(root / "config" / "challenge_cost_policy.yaml")
 

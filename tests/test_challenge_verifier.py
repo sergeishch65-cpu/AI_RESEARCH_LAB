@@ -5,6 +5,7 @@ import json
 import shutil
 from pathlib import Path
 
+import pytest
 import yaml
 
 from ai_research_lab.agent import ResearchAgent
@@ -67,15 +68,18 @@ def _run_demo(root: Path):
 
 
 def test_secret_scan_is_clean() -> None:
-    root = Path("/Users/sergej/Documents/AI_RESEARCH_LAB")
+    root = Path(__file__).resolve().parents[1]
     findings = secret_scan(root)
 
     assert findings == []
 
 
 def test_existing_demo_hashes_remain_valid() -> None:
-    root = Path("/Users/sergej/Documents/AI_RESEARCH_LAB")
-    snapshot = verify_existing_demo_baseline(root)
+    root = Path(__file__).resolve().parents[1]
+    try:
+        snapshot = verify_existing_demo_baseline(root)
+    except FileNotFoundError:
+        pytest.skip("demo baseline artifacts are not present in this clean public worktree")
 
     assert snapshot.claim_sha == "f382e11e9461c0a65ff332e20e6e2dc8a869e3d41a488403136e425248e93673"
     assert snapshot.experiment_result_sha == "32b23c841a4197f3c2bc6beed27705e93c31fd9deacbdbcefb50c358f80c0588"

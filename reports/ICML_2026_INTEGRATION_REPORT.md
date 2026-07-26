@@ -90,15 +90,15 @@ Challenge-layer for Hugging Face ICML 2026 Agent Reproduction Challenge and Trac
 - Username: `n/a`
 - Write readiness: `NOT_AUTHENTICATED`
 - Token disclosure: `NO`
-- CLI path: `/Users/sergej/Documents/AI_RESEARCH_LAB/.venv/bin/hf`
+- CLI path: `<REPOSITORY_ROOT>/.venv/bin/hf`
 
 ## 8. Skills
 
 - `hf skills add`: ran successfully.
 - `trackio skills add`: ran successfully.
 - Created paths:
-  - `/Users/sergej/Documents/AI_RESEARCH_LAB/.agents/skills/hf-cli`
-  - `/Users/sergej/Documents/AI_RESEARCH_LAB/.agents/skills/trackio`
+  - `.agents/skills/hf-cli`
+  - `.agents/skills/trackio`
 - Limitations:
   - installs were project-local in `.agents/skills`, not committed;
   - no user skills were removed or overwritten.
@@ -118,7 +118,7 @@ Challenge-layer for Hugging Face ICML 2026 Agent Reproduction Challenge and Trac
   - `0.007766857514033455`
 - Result: `verified = true`
 - Summary path:
-  - `/private/var/folders/fq/zqtfm4013c16dvj_jmc30p640000gp/T/ai-research-lab-trackio-.../.trackio/ICML-2026-agent-repro__trackio-smoke__summary.json`
+  - temporary file in the system temp directory: `.trackio/ICML-2026-agent-repro__trackio-smoke__summary.json`
 - Remote side effects:
   - `space_id = None`
   - `server_url = None`

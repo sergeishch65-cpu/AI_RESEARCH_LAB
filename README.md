@@ -126,7 +126,7 @@ AI_RESEARCH_LAB/
 ## Установка
 
 ```bash
-cd /Users/sergej/Documents/AI_RESEARCH_LAB
+cd <REPOSITORY_ROOT>
 make install
 ```
 
@@ -216,6 +216,14 @@ make notebook-check
 - не используйте платные API;
 - не запускайте тяжёлые GPU-эксперименты на этом этапе;
 - не подгоняйте критерий успеха после получения результатов.
+
+## License
+
+Original AI_RESEARCH_LAB code and documentation are licensed under the MIT License unless otherwise stated.
+
+Third-party articles, datasets, source repositories, vendor code, figures, and other external materials remain subject to their original licenses and terms.
+
+See the LICENSE file for details.
 
 ## Типичные ошибки и как их исправить
 

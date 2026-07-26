@@ -15,7 +15,6 @@
 - `exports/`
 - `figures/`
 - `metadata/`
-- `.work/`
 
 ## Materials Used
 - research/repro-colorful-pinball-targeted/publication/presentation/sources/ru/01_context.md
@@ -24,7 +23,7 @@
 - research/repro-colorful-pinball-targeted/publication/presentation/sources/en/01_context.md
 - research/repro-colorful-pinball-targeted/publication/presentation/sources/en/02_evidence.md
 - research/repro-colorful-pinball-targeted/publication/presentation/sources/en/03_recommendations.md
-- research/repro-colorful-pinball-targeted/publication/presentation/.work/source-notes.txt
+- research/repro-colorful-pinball-targeted/publication/presentation/metadata/source-notes-public.txt
 
 ## Exported Files and SHA-256
 

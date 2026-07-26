@@ -16,19 +16,22 @@ from ai_research_lab.challenge.workflows import (
 from ai_research_lab.cli import main
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 def _prepare_temp_challenge_root(tmp_path: Path) -> Path:
     root = tmp_path
     (root / "config").mkdir(parents=True, exist_ok=True)
     shutil.copy2(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/config/challenge_icml_2026.yaml"),
+        REPO_ROOT / "config" / "challenge_icml_2026.yaml",
         root / "config" / "challenge_icml_2026.yaml",
     )
     shutil.copy2(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/config/challenge_cost_policy.yaml"),
+        REPO_ROOT / "config" / "challenge_cost_policy.yaml",
         root / "config" / "challenge_cost_policy.yaml",
     )
     shutil.copytree(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/research/_templates/icml_2026_reproduction"),
+        REPO_ROOT / "research" / "_templates" / "icml_2026_reproduction",
         root / "research" / "_templates" / "icml_2026_reproduction",
     )
     return root
@@ -58,7 +61,7 @@ def test_paper_id_required_and_path_traversal_blocked(tmp_path: Path) -> None:
 
 
 def test_publication_and_submission_are_blocked_by_default() -> None:
-    root = Path("/Users/sergej/Documents/AI_RESEARCH_LAB")
+    root = Path(__file__).resolve().parents[1]
     publication = blocked_publication_payload(root, "demo")
     submission = blocked_submission_payload(root, "demo")
 

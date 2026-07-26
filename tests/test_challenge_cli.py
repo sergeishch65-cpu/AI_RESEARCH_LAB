@@ -7,19 +7,22 @@ from ai_research_lab import cli as cli_module
 from ai_research_lab.cli import main
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 def _prepare_temp_challenge_root(tmp_path: Path) -> Path:
     root = tmp_path
     (root / "config").mkdir(parents=True, exist_ok=True)
     shutil.copy2(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/config/challenge_icml_2026.yaml"),
+        REPO_ROOT / "config" / "challenge_icml_2026.yaml",
         root / "config" / "challenge_icml_2026.yaml",
     )
     shutil.copy2(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/config/challenge_cost_policy.yaml"),
+        REPO_ROOT / "config" / "challenge_cost_policy.yaml",
         root / "config" / "challenge_cost_policy.yaml",
     )
     shutil.copytree(
-        Path("/Users/sergej/Documents/AI_RESEARCH_LAB/research/_templates/icml_2026_reproduction"),
+        REPO_ROOT / "research" / "_templates" / "icml_2026_reproduction",
         root / "research" / "_templates" / "icml_2026_reproduction",
     )
     return root
