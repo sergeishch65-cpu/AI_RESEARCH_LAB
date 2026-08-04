@@ -1,0 +1,24 @@
+{
+  "claim_id": "wisdm-ucm-rf-coverage-v1",
+  "comparator": "User-independent model (UIM)",
+  "conformal_method": "SplitConformalClassifier(confidence_level=0.95, conformity_score=\"lac\")",
+  "dataset": "WISDM Activity Prediction v1.1 transformed dataset",
+  "expected_direction": "UCM coverage > UIM coverage",
+  "metric": "Empirical coverage uplift",
+  "model": "RandomForestClassifier(n_estimators=50, random_state=seed, n_jobs=1)",
+  "paper": "Conformal Prediction in Multi-User Settings: An Evaluation",
+  "population": "All retained users, one target user at a time",
+  "repetitions": 20,
+  "reported_result": "Reference paper reports UCM coverage about 96.28% versus UIM coverage about 88.76%; UCM set size about 2.04 versus UIM set size about 1.39",
+  "seed_policy": "random_seed = 100 + iteration for iterations 1..20",
+  "source_evidence": [
+    "Paper tables 8 and 9",
+    "Official WISDM dataset page",
+    "Official repository notebooks/globals.py",
+    "Official repository notebooks/run_uc-model.ipynb",
+    "Official repository notebooks/run_ui-model.ipynb"
+  ],
+  "subset": "Retained users after official formatter filtering",
+  "task": "6-class multi-user activity recognition",
+  "tolerance": "Coverage +/- 1.0 percentage points; set size +/- 0.2"
+}

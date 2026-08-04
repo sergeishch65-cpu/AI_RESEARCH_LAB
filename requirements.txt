@@ -4,6 +4,8 @@ nbconvert
 nbformat
 numpy
 pandas
+scikit-learn==1.8.0
+mapie==1.4.1
 matplotlib
 pyyaml
 pydantic

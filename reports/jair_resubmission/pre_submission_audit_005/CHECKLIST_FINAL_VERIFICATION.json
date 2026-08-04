@@ -1,0 +1,33 @@
+{
+  "status": "PASS_WITH_LIMITATION",
+  "counts": {
+    "VERIFIED": 13,
+    "VERIFIED_WITH_LIMITATION": 7,
+    "NOT_APPLICABLE": 2,
+    "FAIL": 0
+  },
+  "items": [
+    {"item": 1, "status": "VERIFIED"},
+    {"item": 2, "status": "VERIFIED"},
+    {"item": 3, "status": "VERIFIED"},
+    {"item": 4, "status": "NOT_APPLICABLE"},
+    {"item": 5, "status": "VERIFIED"},
+    {"item": 6, "status": "NOT_APPLICABLE"},
+    {"item": 7, "status": "VERIFIED"},
+    {"item": 8, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 9, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 10, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 11, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 12, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 13, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 14, "status": "VERIFIED"},
+    {"item": 15, "status": "VERIFIED_WITH_LIMITATION"},
+    {"item": 16, "status": "VERIFIED"},
+    {"item": 17, "status": "VERIFIED"},
+    {"item": 18, "status": "VERIFIED"},
+    {"item": 19, "status": "VERIFIED"},
+    {"item": 20, "status": "VERIFIED"},
+    {"item": 21, "status": "VERIFIED"},
+    {"item": 22, "status": "VERIFIED"}
+  ]
+}

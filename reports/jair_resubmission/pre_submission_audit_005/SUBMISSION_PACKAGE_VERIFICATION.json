@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "submission/jair_v3/manuscript/ERROR_PERSISTENCE_V3_MANUSCRIPT.tex",
+      "size_bytes": 30947,
+      "sha256": "17733c99cf02d31420b46df3a7953f4d2c5642df9bb79bc877dc5b2f43832962",
+      "mtime_utc": "2026-08-03T13:13:43.696662+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/ERROR_PERSISTENCE_V3_MANUSCRIPT.pdf",
+      "size_bytes": 228100,
+      "sha256": "b1991276732e5abac320eed6cb0fd2e1f691e635b28016df96a0036eb45ae524",
+      "mtime_utc": "2026-08-03T18:35:39.514070+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/error_persistence_v3.bib",
+      "size_bytes": 5297,
+      "sha256": "5e5d5aa5fa051d98a5666a8b5a945403fbd6d5c9a4b822edf0a4dc12e68fc171",
+      "mtime_utc": "2026-08-03T10:47:21.062763+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/jair.cls",
+      "size_bytes": 15064,
+      "sha256": "b203f8fe198a82afececa5fc5c2641fa529e3aa05b82b329bcf5891be339fc68",
+      "mtime_utc": "2026-08-03T10:40:58.772519+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/acmart.cls",
+      "size_bytes": 119763,
+      "sha256": "b174b1003076b63285ef5fcbc0469ce26206b70f6259922be82f96425d227693",
+      "mtime_utc": "2026-08-03T15:48:58.801649+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/acmauthoryear.bbx",
+      "size_bytes": 20872,
+      "sha256": "267dc31eb08af3524b12ac76d4e95fa6604022c2ae171eaa13b3af2220749f34",
+      "mtime_utc": "2026-08-03T10:40:58.777995+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/acmauthoryear.cbx",
+      "size_bytes": 6245,
+      "sha256": "cb22394f982fcaf8ed7f0df34234696f45fc130afcf9ee3cd1260805ad2170d1",
+      "mtime_utc": "2026-08-03T10:40:58.780618+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/acmdatamodel.dbx",
+      "size_bytes": 1093,
+      "sha256": "a5bab6fed4585780632607ef2790ee8797864244a4b80bc0c4e3bfcb76b0c2bc",
+      "mtime_utc": "2026-08-03T10:40:58.782756+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/LibertinusMath-Regular.otf",
+      "size_bytes": 588848,
+      "sha256": "ded714b0d3808af527438ed7a85f16933133f66a12104c4a83db4cc248888011",
+      "mtime_utc": "2026-08-03T12:32:42.725630+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/figures/Figure_1_Conceptual_Framework.png",
+      "size_bytes": 21198,
+      "sha256": "249e8c8e3a3dc434d225211c3899ca799881309b1405adee27e6c9a91baeee6f",
+      "mtime_utc": "2026-08-03T12:41:17.200054+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/figures/Figure_2_Experimental_Timeline.png",
+      "size_bytes": 21253,
+      "sha256": "a4496067be3d39e0773fc3ed4acf358bc95d4b0a102030e0dc02a4f3169ba85e",
+      "mtime_utc": "2026-08-03T12:41:17.200818+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/figures/Figure_3_Recovery_Trajectory.png",
+      "size_bytes": 20983,
+      "sha256": "59ae1b613020c51a84649a96cdbc51128173f8e1af8c8a5ba8b14fb4cc6e2876",
+      "mtime_utc": "2026-08-03T12:41:17.201791+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/figures/Figure_4_Effect_Size.png",
+      "size_bytes": 18473,
+      "sha256": "a574661a4ae0675cff4a3b5dae07d18111eec256de3218df0cc02c7997e56aa9",
+      "mtime_utc": "2026-08-03T12:41:17.202705+00:00",
+      "included": true
+    },
+    {
+      "path": "submission/jair_v3/manuscript/figures/Figure_5_Secondary_Metrics.png",
+      "size_bytes": 28073,
+      "sha256": "87fecfee406805e84caab7a78a93532b515ca0dafc6473f8dc8ee8c60294e649",
+      "mtime_utc": "2026-08-03T12:41:17.203109+00:00",
+      "included": true
+    },
+    {
+      "path": "reports/jair_resubmission/corrective_003/JAIR_SUBMISSION_QUESTIONS.md",
+      "size_bytes": 1963,
+      "sha256": "19b4fcc576c520978f698161de68ea39f9682cba3ece5c03ff905b2fddd28f89",
+      "mtime_utc": "2026-08-03T16:37:59.906995+00:00",
+      "included": true
+    },
+    {
+      "path": "reports/jair_resubmission/corrective_003/JAIR_SUBMISSION_QUESTIONS.json",
+      "size_bytes": 2069,
+      "sha256": "4a6e97e43929d91905b6e79792480a3741960c9024f19ce72503d67138bd9107",
+      "mtime_utc": "2026-08-03T16:37:59.907930+00:00",
+      "included": true
+    }
+  ],
+  "verification_artifacts": [
+    "reports/jair_resubmission/corrective_003/build_a/output/ERROR_PERSISTENCE_V3_MANUSCRIPT.pdf",
+    "reports/jair_resubmission/corrective_003/build_b/output/ERROR_PERSISTENCE_V3_MANUSCRIPT.pdf",
+    "reports/jair_resubmission/corrective_003/SHA256SUMS.txt",
+    "reports/jair_resubmission/corrective_003/CLEAN_BUILD_REPRODUCIBILITY_REPORT.md",
+    "reports/jair_resubmission/corrective_003/FONT_EMBEDDING_VERIFICATION.md",
+    "reports/jair_resubmission/corrective_003/REMAINING_BLOCKERS.md"
+  ],
+  "missing_required_files": [],
+  "limitations": [
+    "publication-facing archive intentionally deferred"
+  ]
+}

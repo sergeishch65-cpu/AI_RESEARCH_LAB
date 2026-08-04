@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "unchanged_fields": [
+    "research_question",
+    "hypotheses",
+    "methods",
+    "sample_size",
+    "evaluation_protocol",
+    "figures",
+    "tables",
+    "results",
+    "statistics",
+    "conclusions"
+  ],
+  "scientific_changes_detected": false,
+  "blockers": []
+}

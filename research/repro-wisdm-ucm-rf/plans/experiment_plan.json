@@ -1,0 +1,44 @@
+{
+  "comparator": "UIM",
+  "conformal_method": "SplitConformalClassifier(confidence_level=0.95, conformity_score=\"lac\")",
+  "dataset": "WISDM Activity Prediction v1.1 transformed dataset",
+  "model": "RandomForestClassifier(n_estimators=50, random_state=seed, n_jobs=1)",
+  "preprocessing": [
+    "Download the official WISDM v1.1 transformed archive",
+    "Drop corrupted columns 1, 33, 36, 37, 38",
+    "Keep only complete-activity users",
+    "Exclude users 6 and 24",
+    "Fit MinMaxScaler on training data only"
+  ],
+  "primary_metric": "empirical coverage",
+  "repetitions": 20,
+  "secondary_metric": "average prediction set size",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "split_strategy": [
+    "UIM: 60/40 split on non-target-user rows; test on target-user rows",
+    "UCM: 60/40 split on non-target-user rows; 50/50 split on target-user rows"
+  ],
+  "subset": "Retained users after official formatter filtering",
+  "users": "All retained users, one target user at a time"
+}
