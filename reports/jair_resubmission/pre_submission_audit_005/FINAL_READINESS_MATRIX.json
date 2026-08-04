@@ -1,0 +1,27 @@
+{
+  "overall_status": "READY_FOR_RESUBMISSION",
+  "counts": {
+    "PASS": 9,
+    "PASS_WITH_LIMITATION": 2,
+    "FAIL": 0,
+    "BLOCKER": 0
+  },
+  "matrix": [
+    {"component": "JAIR Template", "status": "PASS"},
+    {"component": "PDF", "status": "PASS_WITH_LIMITATION"},
+    {"component": "Checklist", "status": "PASS_WITH_LIMITATION"},
+    {"component": "Submission Question 1", "status": "PASS"},
+    {"component": "Submission Question 2", "status": "PASS"},
+    {"component": "Submission Question 3", "status": "PASS"},
+    {"component": "Bibliography", "status": "PASS"},
+    {"component": "Figures", "status": "PASS"},
+    {"component": "Tables", "status": "PASS"},
+    {"component": "Scientific Integrity", "status": "PASS"},
+    {"component": "Submission Package", "status": "PASS"}
+  ],
+  "limitations": [
+    "standard LaTeX toolchain unavailable",
+    "PDF byte identity limited by volatile metadata",
+    "publication-facing archive intentionally deferred"
+  ]
+}

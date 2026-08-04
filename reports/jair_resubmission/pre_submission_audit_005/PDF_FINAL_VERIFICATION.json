@@ -1,0 +1,20 @@
+{
+  "status": "PASS_WITH_LIMITATION",
+  "pdf": "/Users/sergej/Documents/AI_RESEARCH_LAB/submission/jair_v3/manuscript/ERROR_PERSISTENCE_V3_MANUSCRIPT.pdf",
+  "page_count": 11,
+  "page_size_pts": [612, 792],
+  "file_size_bytes": 228100,
+  "existing_verification": {
+    "font_embedding": "PASS",
+    "non_embedded_fonts": 0,
+    "type3_fonts": 0,
+    "clean_build_classification": "CONTENT_REPRODUCIBLE_METADATA_NONDETERMINISTIC",
+    "text_hash_equal_across_clean_builds": true
+  },
+  "limitations": [
+    "standard LaTeX toolchain unavailable",
+    "full PDF font inspection tool unavailable in this shell",
+    "empty PDF Keywords metadata / no explicit keywords command in final .tex"
+  ],
+  "blockers": []
+}
